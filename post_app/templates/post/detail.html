@@ -1,0 +1,10 @@
+{% extends "post/layout.html" %}
+
+{% block body %}
+    <h1>{{post.title}}</h1>
+    <h3>{{ post.content }}</h3>
+    <p>Auther: {{ post.auther }}</p>
+    <span>{{ post.created_at }}</span><br><br>
+
+    <a href="{% url "index" %}">Back to post list</a>
+{% endblock body %}

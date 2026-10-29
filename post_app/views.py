@@ -11,7 +11,8 @@ class PostListView(ListView):
     context_object_name = 'posts'
 
 class PostDetailView(DeleteView):
-    pass
+    model = Post
+    template_name = 'post/detail.html'
 
 class CreatePostView(CreateView):
     pass
