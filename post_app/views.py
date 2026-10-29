@@ -37,9 +37,11 @@ class UpdatePostView(UpdateView, LoginRequiredMixin, UserPassesTestMixin):
         form.instance.auther = self.request.user
         return super().form_valid(form)
 
-    # def test_func(self):
-    #     post = self.get_object()
-    #     return self.request.user == post.auther
+class DeletePostView(DeleteView, LoginRequiredMixin, UserPassesTestMixin):
+    model = Post
+    template_name = "post/delete.html"
+    success_url = reverse_lazy('index')
 
-class DeletePostView(DeleteView):
-    pass
+    def test_func(self):
+            post = self.get_object()
+            return self.request.user == post.auther

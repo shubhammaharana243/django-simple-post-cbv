@@ -1,0 +1,11 @@
+{% extends "post/layout.html" %}
+
+{% block body %}
+<h1>Delete Post</h1>
+<form method="post">
+    {% csrf_token %}
+
+    <button type="submit">Delete</button><br><br>
+    <a href="{% url "index" %}">Cancel</a>
+
+{% endblock body %}
