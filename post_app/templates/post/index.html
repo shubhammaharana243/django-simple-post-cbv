@@ -8,7 +8,8 @@
             <span>{{ post.auther }} | </span>
             <span>{{ post.created_at }} | </span>
             <a href='{% url "detail" post.pk %}'>click to read more</a> |
-            <a href='{% url "update" post.pk %}'>update </a>
+            <a href='{% url "update" post.pk %}'>update </a> |
+            <a href='{% url "delete" post.pk %}'>delete</a>
         </div>
         <hr>
     {% endfor %}
