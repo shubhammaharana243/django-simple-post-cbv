@@ -13,7 +13,7 @@ class PostListView(ListView):
     template_name = 'post/index.html'
     context_object_name = 'posts'
 
-class PostDetailView(DeleteView):
+class PostDetailView(DetailView):
     model = Post
     template_name = 'post/detail.html'
 
