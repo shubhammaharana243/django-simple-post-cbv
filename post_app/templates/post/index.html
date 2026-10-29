@@ -7,7 +7,7 @@
             <h2>{{ post.title }}</h2>
             <span>{{ post.auther }} | </span>
             <span>{{ post.created_at }} | </span>
-            <a href=''>click to read more</a>
+            <a href='{% url "detail" post.pk %}'>click to read more</a>
         </div>
         <hr>
     {% endfor %}
